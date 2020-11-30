@@ -15,7 +15,7 @@ function setup() {
 	rectMode(CENTER);
 
 	package=createSprite(width/2, 80, 10,10);
-	package.addImage(packageIMG);
+	package.addImage(packageImg);
 	package.scale=0.2;
 
 	helicopter=createSprite(width/2, 200, 10,10);
@@ -28,7 +28,7 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	package = Bodies.circle(width/2 , 200 , 5 , {restitution:0.4, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.4, isStatic:true});
 	World.add(world, packageBody);
 	
 	//Create a Ground
